@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+
+void calculate_summa (int x, int stop, int step){
+    while (x <= stop) {
+        printf("x = %d\n", x);
+        x += step;
+    }
+}
+void calculate_multiply(int x, int stop, int step) {
+     while (x <= stop) {
+        printf("x = %d\n", x);
+        x *= step;
+    }
+}
+
+int main()
+{
+short progression;
+char arif[30] = "Арифметическя";
+printf("Данная программа производит вычисления арифметической либо геометрической последовательности в зависимости от выбора пользователя\n");
+printf("Введите начльную точку последовательности\n");
+int start, stop, step;
+scanf("%d", &start);
+printf("введите конечную точку\n");
+scanf("%d", &stop);
+printf("введите шаг прогрессии\n");
+scanf("%d", &step);
+printf("Введите '1' для арифметической прогрессии, '2' для геометрической\n");
+scanf("%hd", &progression);
+int x = start;
+if (progression == 1) {
+    calculate_summa(x, stop, step);
+} else {
+    calculate_multiply(x, stop, step);
+}
+    return 0;
+}
